@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="edu.banks.csc272.BankAccountController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10">
+
+    <!-- uniform 20‑px border -->
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <!-- Row 0 : principal -->
+    <Label text="Initial Deposit"          GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="depositField"        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <!-- Row 1 : rate -->
+    <Label text="Annual Interest Rate (%)" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="rateField"           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <!-- Row 2 : years  -->
+    <Label text="Number of Years"          GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="yearsField"          GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- Row 3 : action button  -->
+    <Button text="Calculate New Balance"
+            onAction="#handleCalculate"
+            GridPane.columnIndex="0" GridPane.rowIndex="3"
+            GridPane.columnSpan="2"/>
+
+    <!-- Row 4 : output label -->
+    <Label fx:id="resultLabel"
+           text=""
+           GridPane.columnIndex="0" GridPane.rowIndex="4"
+           GridPane.columnSpan="2"/>
+
+</GridPane>
